@@ -95,6 +95,14 @@ async def simulate():
     
 
 
+valve_state = 0
+
+@app.get("/api/simulatelight")
+async def simulate_light():
+    # Generate a random number for the light simulation
+    global valve_state
+    valve_state = random.randint(0, 1)  # Example: Random float between 0 and 100
+    return JSONResponse({"valve_state": valve_state})
 
 
 
