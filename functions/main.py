@@ -1,40 +1,16 @@
-# Welcome to Cloud Functions for Firebase for Python!
-# To get started, simply uncomment the below code or create your own.
-# Deploy with `firebase deploy`
 
-from firebase_functions import https_fn
-from firebase_admin import initialize_app
-from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse
-import functions_framework
-from mangum import Mangum
 import time
 from datetime import datetime, timezone
 import pytz
 import time
 import random
 
-from google.cloud import firestore
 
-# initialize_app()
-#
-#
-# @https_fn.on_request()
-# def on_request_example(req: https_fn.Request) -> https_fn.Response:
-#     return https_fn.Response("Hello world!")
-
-
-# Firestore client
-db = firestore.Client()
-COLLECTION = "simulation"
-DOC_ID = "current"
-
-
-
-
+cached_values = {}
 
 def generate_new_values():
-    return {
+    global cached_values
+    cached_values = {
         "t1": {
             "hmi_name":"TT0601",
             "uds": "ºC",
@@ -75,15 +51,18 @@ def generate_new_values():
             "uds": "None",
             "value":random.uniform(0.75,4)
         },
-        "date": datetime.fromtimestamp(time.time(), tz=pytz.timezone("Europe/Madrid")).isoformat()
+        "date": datetime.fromtimestamp(time.time(), tz=pytz.timezone("Europe/Madrid")).isoformat(),
+        "now" : time.time()
     }
+
+    return cached_values
 
 
 @app.get("/api/simulate")
 async def simulate():
+    '''
     doc_ref = db.collection(COLLECTION).document(DOC_ID)
     doc = doc_ref.get()
-
     now = time.time()
 
     if doc.exists:
@@ -98,19 +77,34 @@ async def simulate():
         "values": new_values,
         "last_updated": now
     })
-
     return JSONResponse(new_values)   
+    '''
+    now = datetime.fromtimestamp(time.time(), tz=pytz.timezone("Europe/Madrid")).isoformat()
+
+    if cached_values != {}:
+        cached_date = cached_values["now"]
+
+        if time.time() - cached_date <= 5:
+            return JSONResponse(cached_values)
+
+
+    generate_new_values()
+    return JSONResponse(cached_values)
+    
 
 
 
 
 
 
-#THE PART BELOW IS NECCESARY TO TRADUCE THE API TO RUN IN FIREBASE -__(..)__-
 
-# Firebase entry point
-handler = Mangum(app)
 
-@functions_framework.http
-def api_handler(request):
-    return handler(request.environ, lambda status, headers: (status, headers, []))
+
+
+
+
+
+import uvicorn
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=10000)
