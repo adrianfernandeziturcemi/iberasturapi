@@ -1,11 +1,13 @@
 
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 import time
 from datetime import datetime, timezone
 import pytz
 import time
 import random
 
-
+app = FastAPI()
 cached_values = {}
 
 def generate_new_values():
