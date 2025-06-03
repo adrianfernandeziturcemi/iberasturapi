@@ -1,0 +1,154 @@
+[debug] [2025-05-05T06:42:52.577Z] ----------------------------------------------------------------------
+[debug] [2025-05-05T06:42:52.587Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\adrian.fernandez\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-05-05T06:42:52.587Z] CLI Version:   14.2.0
+[debug] [2025-05-05T06:42:52.587Z] Platform:      win32
+[debug] [2025-05-05T06:42:52.587Z] Node Version:  v22.14.0
+[debug] [2025-05-05T06:42:52.588Z] Time:          Mon May 05 2025 08:42:52 GMT+0200 (Central European Summer Time)
+[debug] [2025-05-05T06:42:52.588Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-05T06:42:52.594Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-05-05T06:42:52.660Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-05T06:42:52.660Z] > authorizing via signed-in user (billettrackfirebase@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\adrian.fernandez\Desktop\ProyectosWeb\BilletrackFastAPI
+
+[debug] [2025-05-05T06:42:53.036Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-05-05T06:42:53.036Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-05-05T06:44:11.505Z] Checked if tokens are valid: false, expires at: 1745575006018
+[debug] [2025-05-05T06:44:11.505Z] Checked if tokens are valid: false, expires at: 1745575006018
+[debug] [2025-05-05T06:44:11.506Z] > refreshing access token with scopes: []
+[debug] [2025-05-05T06:44:11.507Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-05-05T06:44:11.507Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-05T06:44:11.697Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-05-05T06:44:11.697Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-05T06:44:11.707Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-05-05T06:44:11.708Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"iberasturapi","name":"iberasturapi"}
+[debug] [2025-05-05T06:44:12.552Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-05-05T06:44:12.552Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.4815459275199093794"}
+[debug] [2025-05-05T06:44:12.553Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:12.553Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:12.554Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4815459275199093794 [none]
+[debug] [2025-05-05T06:44:13.226Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4815459275199093794 200
+[debug] [2025-05-05T06:44:13.226Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4815459275199093794 {"name":"operations/create_project.global.4815459275199093794"}
+[debug] [2025-05-05T06:44:13.740Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-05-05T06:44:13.741Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:13.741Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:13.741Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4815459275199093794 [none]
+[debug] [2025-05-05T06:44:13.934Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4815459275199093794 200
+[debug] [2025-05-05T06:44:13.934Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4815459275199093794 {"name":"operations/create_project.global.4815459275199093794"}
+[debug] [2025-05-05T06:44:14.939Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-05-05T06:44:14.940Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:14.940Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:14.940Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4815459275199093794 [none]
+[debug] [2025-05-05T06:44:15.177Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4815459275199093794 200
+[debug] [2025-05-05T06:44:15.177Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4815459275199093794 {"name":"operations/create_project.global.4815459275199093794","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"302735455872","projectId":"iberasturapi","lifecycleState":"ACTIVE","name":"iberasturapi","createTime":"2025-05-05T06:44:13.552202Z"}}
+[debug] [2025-05-05T06:44:15.179Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:15.179Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:15.180Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/iberasturapi:addFirebase [none]
+[debug] [2025-05-05T06:44:18.901Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/iberasturapi:addFirebase 200
+[debug] [2025-05-05T06:44:18.901Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/iberasturapi:addFirebase {"name":"operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw"}
+[debug] [2025-05-05T06:44:18.901Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:18.901Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:18.901Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw [none]
+[debug] [2025-05-05T06:44:23.471Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw 200
+[debug] [2025-05-05T06:44:23.471Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw {"name":"operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw"}
+[debug] [2025-05-05T06:44:23.984Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-05-05T06:44:23.985Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:23.985Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:23.985Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw [none]
+[debug] [2025-05-05T06:44:24.547Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw 200
+[debug] [2025-05-05T06:44:24.547Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw {"name":"operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw"}
+[debug] [2025-05-05T06:44:25.552Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-05-05T06:44:25.552Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:25.552Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:25.552Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw [none]
+[debug] [2025-05-05T06:44:26.150Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw 200
+[debug] [2025-05-05T06:44:26.150Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw {"name":"operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw"}
+[debug] [2025-05-05T06:44:28.155Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-05-05T06:44:28.156Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:28.156Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:28.156Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw [none]
+[debug] [2025-05-05T06:44:28.934Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw 200
+[debug] [2025-05-05T06:44:28.934Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw {"name":"operations/workflows/YjE0ZmNlNDMtMmE5OC00Mjg3LWEzZjktMjkxOGZlOWQ0MzAw","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"iberasturapi","projectNumber":"302735455872","displayName":"iberasturapi","name":"projects/iberasturapi","resources":{"hostingSite":"iberasturapi"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: iberasturapi
+[info]    - Project Name: iberasturapi
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/iberasturapi/overview
+[info] i  Using project iberasturapi (iberasturapi) 
+[info] 
+=== Functions Setup
+[debug] [2025-05-05T06:44:28.946Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-05T06:44:28.946Z] > authorizing via signed-in user (billettrackfirebase@gmail.com)
+[debug] [2025-05-05T06:44:28.946Z] [iam] checking project iberasturapi for permissions ["firebase.projects.get"]
+[debug] [2025-05-05T06:44:28.947Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:28.947Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:28.947Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/iberasturapi:testIamPermissions [none]
+[debug] [2025-05-05T06:44:28.947Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/iberasturapi:testIamPermissions x-goog-quota-user=projects/iberasturapi
+[debug] [2025-05-05T06:44:28.947Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/iberasturapi:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-05-05T06:44:30.022Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/iberasturapi:testIamPermissions 200
+[debug] [2025-05-05T06:44:30.023Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/iberasturapi:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-05-05T06:44:30.024Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:30.024Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:30.024Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:30.024Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:30.024Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-05-05T06:44:30.025Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/iberasturapi
+[debug] [2025-05-05T06:44:30.026Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-05-05T06:44:30.026Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/iberasturapi
+[debug] [2025-05-05T06:44:31.440Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/runtimeconfig.googleapis.com 200
+[debug] [2025-05-05T06:44:31.440Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-05-05T06:44:31.445Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com 200
+[debug] [2025-05-05T06:44:31.445Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-05-05T06:44:31.446Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:31.446Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:31.446Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2025-05-05T06:44:31.446Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/iberasturapi
+[debug] [2025-05-05T06:44:32.793Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2025-05-05T06:44:32.793Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2025-05-05T06:44:42.803Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:42.804Z] Checked if tokens are valid: true, expires at: 1746431050697
+[debug] [2025-05-05T06:44:42.805Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-05-05T06:44:42.805Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/iberasturapi
+[debug] [2025-05-05T06:44:44.357Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com 200
+[debug] [2025-05-05T06:44:44.358Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/iberasturapi/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/requirements.txt 
+[info] +  Wrote functions/.gitignore 
+[info] +  Wrote functions/main.py 
+[debug] [2025-05-05T06:45:17.209Z] Running command with virtualenv: command="C:\Users\adrian.fernandez\Desktop\ProyectosWeb\BilletrackFastAPI\functions\venv\Scripts\activate.bat", args=["","&&","pip3","install","--upgrade","pip"]
+[debug] [2025-05-05T06:45:30.437Z] Error: spawn "C:\Users\adrian.fernandez\Desktop\ProyectosWeb\BilletrackFastAPI\functions\venv\Scripts\activate.bat" ENOENT
+    at notFoundError (C:\Users\adrian.fernandez\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:6:26)
+    at verifyENOENT (C:\Users\adrian.fernandez\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:40:16)
+    at cp.emit (C:\Users\adrian.fernandez\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:27:25)
+    at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+[error] 
+[error] Error: An unexpected error has occurred.
