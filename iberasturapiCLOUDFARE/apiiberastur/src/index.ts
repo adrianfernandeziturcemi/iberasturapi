@@ -155,8 +155,8 @@ function generateNewValues(): void {
   const date = new Date().toLocaleString("sv-SE", { timeZone: "Europe/Madrid" });
 
   cachedValues = {
-    t1: { hmi_name: "TT0601", uds: "ºC", value: Math.floor(Math.random() * 31) },
-    t2: { hmi_name: "TT0602", uds: "ºC", value: Math.floor(Math.random() * 31) },
+    t1: { hmi_name: "TT0601", uds: "ºC", value: Math.floor(Math.random() * 3) + 20 },
+    t2: { hmi_name: "TT0602", uds: "ºC", value: Math.floor(Math.random() * 3) + 20 },
     p1: { hmi_name: "PT0601", uds: "mmwc", value: Math.floor(Math.random() * 401) + 100 },
     p2: { hmi_name: "PT0602", uds: "mmwc", value: Math.floor(Math.random() * 51) + 550 },
     q1: { hmi_name: "FT0601", uds: "Nm3/h", value: Math.floor(Math.random() * 11) + 10 },
